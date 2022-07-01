@@ -1,0 +1,25 @@
+.converter__nav {
+  height: 60px;
+  background-color: tomato;
+  ul {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    li {
+      margin: 0 20px;
+      a {
+        text-decoration: none;
+        color: white;
+        font-size: 22px;
+        font-weight: 500;
+      }
+    }
+  }
+}
+
+.converter__wrapper {
+  width: 100%;
+}

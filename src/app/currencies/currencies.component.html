@@ -1,0 +1,33 @@
+<div class="currencies__wrapper">
+  <div class="currencies__header">
+    <label
+      >Selected value:
+      <select [(ngModel)]="selectedCurrency" (change)="calculateCurrencyRate()">
+        <option
+          *ngFor="let currencyName of currenciesNames"
+          [ngValue]="currencyName"
+        >
+          {{ currencyName }}
+        </option>
+      </select></label
+    >
+
+    <p>1 {{ selectedCurrency }} is equivalent to:</p>
+  </div>
+  <input
+    class="currencies__search"
+    type="text"
+    placeholder="Search for a currency"
+    [(ngModel)]="value"
+  />
+  <div class="currencies__data-block">
+    <div
+      class="currencies__data"
+      *ngFor="let item of currencies | keyvalue | currencyFilter: value"
+    >
+      <p>
+        <span>{{ item.key }}</span> {{ item.value }}
+      </p>
+    </div>
+  </div>
+</div>

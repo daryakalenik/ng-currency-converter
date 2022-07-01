@@ -1,0 +1,49 @@
+.convert__wrapper {
+  height: 200px;
+  width: 40%;
+  margin: 0 auto;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border: 3px dotted tomato;
+}
+
+.convert__item {
+  font-size: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  input {
+    margin-right: 10px;
+    width: 90px;
+    height: 30px;
+    font-size: 20px;
+  }
+  select {
+    height: 25px;
+  }
+}
+
+.convert__arrows {
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.arrow {
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 4px;
+}
+
+.right {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+
+.left {
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+}

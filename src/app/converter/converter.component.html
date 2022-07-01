@@ -1,0 +1,21 @@
+<div class="convert__wrapper">
+  <div class="convert__item">
+    <input type="text" [(ngModel)]="firstSum" (input)="convertCurrencies()" />
+    <select [(ngModel)]="firstSelectedCurrency" (change)="convertCurrencies()">
+      <option *ngFor="let currency of currenciesNames" [value]="currency">
+        {{ currency }}
+      </option>
+    </select>
+  </div>
+  <div class="convert__arrows">
+    <div class="arrow right"></div>
+  </div>
+  <div class="convert__item">
+    <input type="text" [ngModel]="secondSum" disabled />
+    <select [(ngModel)]="secondSelectedCurrency" (change)="convertCurrencies()">
+      <option *ngFor="let currency of currenciesNames" [value]="currency">
+        {{ currency }}
+      </option>
+    </select>
+  </div>
+</div>
